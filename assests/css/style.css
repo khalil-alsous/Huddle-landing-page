@@ -1,0 +1,295 @@
+/* Start Variable */
+:root{
+    --main-color: hsl(322, 100%, 66%);
+    --secondary-color: hsl(208, 11%, 55%);
+    --dark-color: hsl(192, 100%, 9%);
+    --section-padding: 35px;
+    --main-duration: 0.2s;
+    /*
+    --section-margin: 15px; */
+}
+/* End Variable */
+/* start hover liprary edit */
+
+/* end hover liprary edit */
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+/* End Global Rules */
+/* start componant */
+.container{
+    width: 90%;
+}
+.button{
+    border: none;
+    padding: 13px 55px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--main-duration);
+}
+.button:focus{
+    outline: none;
+}
+.pink-button{
+    color: #fff;
+    background-color: var(--main-color);
+}
+.pink-button:hover{
+    background-color: hsl(322, 100%, 48%);
+}
+.horizontal-card{
+    box-shadow: 0 0 6px 0px hsl(0deg 0% 0% / 22%);
+    border-radius: 7px;
+    padding: calc(var(--section-padding) * 1.5) var(--section-padding);
+}
+.horizontal-card .img-cont{
+    text-align: right;
+}
+.horizontal-card .img-cont img{
+    width: 100%;
+}
+@media(max-width:767px){
+    .horizontal-card{
+        border-radius: 25px;
+    }
+    .horizontal-card .row{
+        flex-direction: column-reverse;
+    }
+    .horizontal-card .img-cont{
+        text-align: center;
+        margin-bottom: calc(var(--section-padding) * 1.5);
+    }
+    .horizontal-card .img-cont img{
+        width: 80%;
+    }
+    .horizontal-card .details-cont{
+        text-align: center;
+    }
+}
+.horizontal-card .details-cont h3{
+    padding-bottom: 15px;
+}
+.horizontal-card .details-cont p{
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+@media(min-width:768px){
+    .horizontal-card:not(:last-of-type){
+        padding-left: 80px;
+    }
+    .horizontal-card .details-cont p{
+        padding-right: 10px;
+    }
+}
+/* end componant */
+/* start hero */
+.hero{
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) * 1.5);
+    background-color: hsl(193, 100%, 96%);
+}
+@media(min-width:768px){
+    .hero{
+        background-image: url("../../images/bg-hero-desktop.svg");
+    }
+}
+@media(max-width:767px){
+    .hero{
+        background-image: url("../../images/bg-hero-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.hero header .img-cont{
+    width: fit-content;
+}
+.hero header .logo{
+    max-width: 70%;
+}
+.hero header button{
+    color: var(--secondary-color);
+    background-color: #fff;
+    box-shadow: 0 0 5px 0px #eee;
+}
+@media(max-width:767px){
+    .hero header button{
+        padding: 5px 25px;
+    }
+    .hero header .logo{
+        max-width: 100px;
+    }
+}
+.hero .child{
+    padding-top: calc(var(--section-padding) * 1.5);
+}
+.hero .child .img-cont img{
+    width: 100%;
+}
+.hero .child .community h2{
+    padding-bottom: 20px;
+    line-height: 1.6;
+}
+@media(min-width:992px){
+    .hero .child .community h2{
+        padding-right: var(--section-padding);
+    }    
+}
+@media(max-width:767px){
+    .hero .child .community{
+        text-align: center;
+        margin-bottom: calc(var(--section-padding) * 2);
+    }
+}
+.hero .child .community p{
+    color: var(--dark-color);
+    padding-bottom: 15px;
+    line-height: 1.6;
+}
+/* end hero */
+/* start Grow Together */
+/* start Flowing Conversations */
+/* start Your Users */
+.growTogether{
+    margin-top: calc(var(--section-padding) * 4);
+}
+.growTogether,
+.yourUsers,
+.flowingConversations{
+    margin-bottom: calc(var(--section-padding) + 10px);
+}
+@media(max-width:767px){
+    .growTogether{
+        margin-top: calc(var(--section-padding) * 2);
+    }    
+    .flowingConversations .horizontal-card .row{
+        flex-direction: column;
+    }
+}
+/* end Grow Together */
+/* end Flowing Conversations */
+/* end Your Users */
+/* start Get Started */
+.getStarted .horizontal-card{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fff;
+    position: relative;
+    top: 100px;
+}
+.getStarted .horizontal-card h3{
+    color: var(--dark-color);
+    margin-bottom: var(--section-padding);
+}
+@media (min-width:768px) {
+    .getStarted .horizontal-card{
+        width: 50%;
+    }
+    .getStarted .horizontal-card button{
+        font-size: 18px;
+    }    
+}
+@media (max-width:767px) {
+    .getStarted .horizontal-card{
+        padding:var(--section-padding) calc(var(--section-padding) / 2);
+    }
+    .getStarted .horizontal-card h3{
+        color: var(--dark-color);
+        margin-bottom: var(--section-padding);
+    }
+}
+/* End Get Started */
+/* start footer */
+footer{
+    background-color: var(--dark-color);
+    color: #C4DBE2;
+    padding: calc(var(--section-padding) * 5) 0 var(--section-padding);
+}
+footer .logo{
+    width: 50%;
+    margin-bottom: var(--section-padding);
+}
+footer .child:nth-of-type(1) .contact .icon{
+    margin-right: 20px;
+}
+footer .child:nth-of-type(1) .contact p{
+    line-height: 1.6;
+    font-size: 14px;
+}
+@media (min-width:768px) {
+    footer .child:nth-of-type(1) .contact p{
+        padding-right: 40px;
+    }
+}
+@media (max-width:767px) {
+    footer .child:nth-of-type(1),
+    footer .child:nth-of-type(3){
+        margin-bottom: var(--section-padding);
+    }
+}
+footer .child ul{
+    padding-left : 0px
+}
+footer .child ul li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+footer .child ul li a{
+    color: #C4DBE2;
+    text-decoration: none;
+    font-size: 15px;
+}
+footer .child ul li a:hover{
+    text-decoration: underline;
+}
+footer .social i:nth-of-type(1){
+    padding: 10px 13px;
+}
+footer .social i{
+    border: 1px solid #C4DBE2;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--main-duration);
+    margin-right: 7px;
+    font-size: 18px;
+}
+footer .social i:hover{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+footer .social{
+    margin-top: 20px;
+}
+footer .copyright{
+    font-size: 14px;
+}
+@media (min-width:768px) {
+    footer .social{
+        margin-bottom: 50px;
+    }
+    footer .copyright{
+        position: relative;
+        top: 50px;
+    }
+}
+@media (max-width:767px) {
+    footer .child:last-of-type{
+        text-align: center;
+    }
+    footer .social{
+        margin-bottom: 15px;
+    }
+}
+/* End footer */
